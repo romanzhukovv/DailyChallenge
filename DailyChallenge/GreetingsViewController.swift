@@ -21,8 +21,19 @@ class GreetingsViewController: DCBaseViewController {
     
     private let nameTextField: UITextField = {
         let textField = UITextField()
+        textField.placeholder = "Enter your name"
+        textField.backgroundColor = .white
+        textField.layer.cornerRadius = 10
         
         return textField
+    }()
+    
+    private let continueButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Continue", for: .normal)
+        button.backgroundColor = .systemPink
+        button.layer.cornerRadius = 10
+        return button
     }()
 
     override func viewDidLoad() {
@@ -36,6 +47,12 @@ extension GreetingsViewController {
         
         view.addSubview(helloLabel)
         helloLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(nameTextField)
+        nameTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(continueButton)
+        continueButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func layoutViews() {
@@ -43,13 +60,25 @@ extension GreetingsViewController {
         
         NSLayoutConstraint.activate([
             helloLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            helloLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            helloLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            helloLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            helloLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            nameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            nameTextField.leadingAnchor.constraint(equalTo: helloLabel.leadingAnchor),
+            nameTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+            continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            continueButton.widthAnchor.constraint(equalToConstant: 200),
+            continueButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
     override func configureViews() {
         super.configureViews()
+        
+        continueButton.setTitleColor(.white, for: .normal)
     }
 }
 
