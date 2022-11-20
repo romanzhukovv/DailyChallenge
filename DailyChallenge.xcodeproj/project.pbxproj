@@ -15,6 +15,7 @@
 		FCA9A999292A688900B5217E /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A998292A688900B5217E /* Resources.swift */; };
 		FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A99B292A68EE00B5217E /* DataManager.swift */; };
 		FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A99D292A690E00B5217E /* StorageManager.swift */; };
+		FCA9A9A3292A73BA00B5217E /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A9A2292A73BA00B5217E /* UIView + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCA9A998292A688900B5217E /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		FCA9A99B292A68EE00B5217E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FCA9A99D292A690E00B5217E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		FCA9A9A2292A73BA00B5217E /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA9A998292A688900B5217E /* Resources.swift */,
+				FCA9A9A2292A73BA00B5217E /* UIView + ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA9A982292A60D500B5217E /* GreetingsViewController.swift in Sources */,
+				FCA9A9A3292A73BA00B5217E /* UIView + ext.swift in Sources */,
 				FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */,
 				FCA9A999292A688900B5217E /* Resources.swift in Sources */,
 				FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */,

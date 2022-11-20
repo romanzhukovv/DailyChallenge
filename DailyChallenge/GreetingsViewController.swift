@@ -45,14 +45,9 @@ extension GreetingsViewController {
     override func addViews() {
         super.addViews()
         
-        view.addSubview(helloLabel)
-        helloLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(nameTextField)
-        nameTextField.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(continueButton)
-        continueButton.translatesAutoresizingMaskIntoConstraints = false
+        view.setupView(helloLabel)
+        view.setupView(nameTextField)
+        view.setupView(continueButton)
     }
     
     override func layoutViews() {
