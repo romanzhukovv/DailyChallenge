@@ -52,13 +52,45 @@
 		FCA9A97C292A60D500B5217E /* DailyChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FCA9A97D292A60D500B5217E /* AppDelegate.swift */,
-				FCA9A981292A60D500B5217E /* ViewController.swift */,
-				FCA9A986292A60D500B5217E /* Assets.xcassets */,
+				FCA9A994292A63A200B5217E /* Helpers */,
+				FCA9A991292A62CE00B5217E /* SupportingFiles */,
+				FCA9A992292A62E600B5217E /* ViewControllers */,
+				FCA9A993292A630300B5217E /* Resources */,
 				FCA9A988292A60D500B5217E /* LaunchScreen.storyboard */,
-				FCA9A98B292A60D500B5217E /* Info.plist */,
 			);
 			path = DailyChallenge;
+			sourceTree = "<group>";
+		};
+		FCA9A991292A62CE00B5217E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FCA9A97D292A60D500B5217E /* AppDelegate.swift */,
+				FCA9A98B292A60D500B5217E /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FCA9A992292A62E600B5217E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCA9A981292A60D500B5217E /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCA9A993292A630300B5217E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCA9A986292A60D500B5217E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCA9A994292A63A200B5217E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +307,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4ARG8W2BQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DailyChallenge/Info.plist;
+				INFOPLIST_FILE = DailyChallenge/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -303,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4ARG8W2BQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DailyChallenge/Info.plist;
+				INFOPLIST_FILE = DailyChallenge/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
