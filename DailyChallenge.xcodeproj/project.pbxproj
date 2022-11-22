@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA33977292CA4A200C38E7B /* Challenge.swift */; };
 		FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A97D292A60D500B5217E /* AppDelegate.swift */; };
 		FCA9A982292A60D500B5217E /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A981292A60D500B5217E /* GreetingsViewController.swift */; };
 		FCA9A987292A60D500B5217E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA9A986292A60D500B5217E /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FCA33977292CA4A200C38E7B /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		FCA9A97A292A60D500B5217E /* DailyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA9A97D292A60D500B5217E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA9A981292A60D500B5217E /* GreetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCA33976292CA48900C38E7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCA33977292CA4A200C38E7B /* Challenge.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FCA9A971292A60D500B5217E = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 			children = (
 				FCA9A991292A62CE00B5217E /* SupportingFiles */,
 				FCA9A994292A63A200B5217E /* Helpers */,
+				FCA33976292CA48900C38E7B /* Models */,
 				FCA9A99A292A68D500B5217E /* Services */,
 				FCA9A992292A62E600B5217E /* ViewControllers */,
 				FCA9A993292A630300B5217E /* Resources */,
@@ -207,6 +218,7 @@
 				FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */,
 				FCA9A999292A688900B5217E /* Resources.swift in Sources */,
 				FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */,
+				FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */,
 				FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */,
 				FCA9A997292A657E00B5217E /* DCBaseViewController.swift in Sources */,
 			);

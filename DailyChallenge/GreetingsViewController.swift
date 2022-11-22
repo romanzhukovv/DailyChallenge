@@ -21,10 +21,12 @@ class GreetingsViewController: DCBaseViewController {
     
     private let nameTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter your name"
-        textField.backgroundColor = .white
+        textField.backgroundColor = .systemOrange
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Enter your name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+        )
         textField.layer.cornerRadius = 10
-        
         return textField
     }()
     
