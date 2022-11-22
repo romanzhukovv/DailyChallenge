@@ -7,11 +7,21 @@
 
 import Foundation
 
-struct Challenge {
+struct Challenge: Hashable {
+    let category: Category
     let name: String
     let image: String
     
-    func getChallenges() -> [Category : [Challenge]] {
-//        DataManager.shared.categories
+    enum Category: String {
+        case sport = "Спорт"
+        case food = "Питание"
+        case health = "Здоровье"
+        case selfDevelopment = "Саморазвитие"
+    }
+    
+    func getChallenges() -> [Challenge] {
+        [
+            Challenge(category: .sport, name: "", image: "")
+        ]
     }
 }
