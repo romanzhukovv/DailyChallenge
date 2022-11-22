@@ -9,35 +9,8 @@ import UIKit
 
 class GreetingsViewController: DCBaseViewController {
     
-    private let helloLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hello, tell me your name please:"
-        label.textColor = .systemCyan
-        label.font = .systemFont(ofSize: 30, weight: .heavy)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
+    private let greetingsView = GreetingsView()
     
-    private let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .systemOrange
-        textField.attributedPlaceholder = NSAttributedString(
-            string: "Enter your name",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-        )
-        textField.layer.cornerRadius = 10
-        return textField
-    }()
-    
-    private let continueButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Continue", for: .normal)
-        button.backgroundColor = .systemPink
-        button.layer.cornerRadius = 10
-        return button
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -46,36 +19,24 @@ class GreetingsViewController: DCBaseViewController {
 extension GreetingsViewController {
     override func addViews() {
         super.addViews()
+        view.setupView(greetingsView)
         
-        view.setupView(helloLabel)
-        view.setupView(nameTextField)
-        view.setupView(continueButton)
     }
     
     override func layoutViews() {
         super.layoutViews()
         
         NSLayoutConstraint.activate([
-            helloLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            helloLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
-            helloLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            
-            nameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nameTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            nameTextField.leadingAnchor.constraint(equalTo: helloLabel.leadingAnchor),
-            nameTextField.heightAnchor.constraint(equalToConstant: 50),
-            
-            continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            continueButton.widthAnchor.constraint(equalToConstant: 200),
-            continueButton.heightAnchor.constraint(equalToConstant: 50)
+            greetingsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            greetingsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            greetingsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            greetingsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
     }
     
     override func configureViews() {
         super.configureViews()
-        
-        continueButton.setTitleColor(.white, for: .normal)
     }
 }
 

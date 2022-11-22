@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9825292D0BE40028A239 /* DCBaseView.swift */; };
+		FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9828292D0D450028A239 /* GreetingsView.swift */; };
 		FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA33977292CA4A200C38E7B /* Challenge.swift */; };
 		FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A97D292A60D500B5217E /* AppDelegate.swift */; };
 		FCA9A982292A60D500B5217E /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A981292A60D500B5217E /* GreetingsViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC9D9825292D0BE40028A239 /* DCBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCBaseView.swift; sourceTree = "<group>"; };
+		FC9D9828292D0D450028A239 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		FCA33977292CA4A200C38E7B /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		FCA9A97A292A60D500B5217E /* DailyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA9A97D292A60D500B5217E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC9D9827292D0D1F0028A239 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC9D9828292D0D450028A239 /* GreetingsView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		FCA33976292CA48900C38E7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA9A996292A657E00B5217E /* DCBaseViewController.swift */,
+				FC9D9825292D0BE40028A239 /* DCBaseView.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 		FCA9A9A1292A698A00B5217E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				FC9D9827292D0D1F0028A239 /* Views */,
 				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
 			);
 			name = Onboarding;
@@ -220,6 +234,8 @@
 				FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */,
 				FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */,
 				FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */,
+				FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */,
+				FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */,
 				FCA9A997292A657E00B5217E /* DCBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
