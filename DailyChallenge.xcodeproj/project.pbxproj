@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */; };
+		FC91AF71292FB0F700A4D352 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */; };
 		FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9825292D0BE40028A239 /* DCBaseView.swift */; };
 		FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9828292D0D450028A239 /* GreetingsView.swift */; };
 		FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA33977292CA4A200C38E7B /* Challenge.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPickerViewController.swift; sourceTree = "<group>"; };
+		FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		FC9D9825292D0BE40028A239 /* DCBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCBaseView.swift; sourceTree = "<group>"; };
 		FC9D9828292D0D450028A239 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		FCA33977292CA4A200C38E7B /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				FCA9A9A1292A698A00B5217E /* Onboarding */,
 				FCA9A995292A654400B5217E /* Base */,
 				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
+				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */,
 				FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */,
 				FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */,
+				FC91AF71292FB0F700A4D352 /* CategoryViewCell.swift in Sources */,
 				FCA9A997292A657E00B5217E /* DCBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
