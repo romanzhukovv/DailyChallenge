@@ -42,7 +42,7 @@ extension GreetingsViewController {
     @objc func buttonTapped() {
         let vc = CategoriesPickerViewController()
 //        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
