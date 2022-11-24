@@ -36,6 +36,10 @@ class GreetingsView: DCBaseView {
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    func buttonAction(_ action: Selector, target: Any?) {
+        continueButton.addTarget(target, action: action, for: .touchUpInside)
+    }
 }
 
 extension GreetingsView {

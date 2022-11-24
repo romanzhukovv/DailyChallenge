@@ -20,7 +20,6 @@ extension GreetingsViewController {
     override func addViews() {
         super.addViews()
         view.setupView(greetingsView)
-        
     }
     
     override func layoutViews() {
@@ -37,6 +36,13 @@ extension GreetingsViewController {
     
     override func configureViews() {
         super.configureViews()
+        greetingsView.buttonAction(#selector(buttonTapped), target: self)
+    }
+    
+    @objc func buttonTapped() {
+        let vc = CategoriesPickerViewController()
+//        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

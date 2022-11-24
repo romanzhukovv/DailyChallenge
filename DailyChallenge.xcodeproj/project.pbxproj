@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */; };
 		FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9825292D0BE40028A239 /* DCBaseView.swift */; };
 		FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9828292D0D450028A239 /* GreetingsView.swift */; };
 		FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA33977292CA4A200C38E7B /* Challenge.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPickerViewController.swift; sourceTree = "<group>"; };
 		FC9D9825292D0BE40028A239 /* DCBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCBaseView.swift; sourceTree = "<group>"; };
 		FC9D9828292D0D450028A239 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
 		FCA33977292CA4A200C38E7B /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				FCA9A9A1292A698A00B5217E /* Onboarding */,
 				FCA9A995292A654400B5217E /* Base */,
+				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				FCA9A982292A60D500B5217E /* GreetingsViewController.swift in Sources */,
 				FCA9A9A3292A73BA00B5217E /* UIView + ext.swift in Sources */,
+				FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */,
 				FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */,
 				FCA9A999292A688900B5217E /* Resources.swift in Sources */,
 				FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */,

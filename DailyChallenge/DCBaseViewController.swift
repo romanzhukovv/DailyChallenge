@@ -9,6 +9,8 @@ import UIKit
 
 class DCBaseViewController: UIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         addViews()
         layoutViews()
         configureViews()
