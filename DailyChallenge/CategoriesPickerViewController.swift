@@ -8,6 +8,7 @@
 import UIKit
 
 final class CategoriesPickerViewController: DCBaseViewController {
+    
     private let collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
@@ -45,6 +46,8 @@ extension CategoriesPickerViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        collectionView.allowsMultipleSelection = true
     }
 }
 
@@ -60,6 +63,14 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.contentView.backgroundColor = .systemBlue
+        if ((cell?.isSelected) != nil) {
+            
+            cell?.contentView.backgroundColor = .systemBlue
+        }    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = .systemPink
     }
+
 }

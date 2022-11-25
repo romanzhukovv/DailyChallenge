@@ -8,10 +8,11 @@
 import UIKit
 
 class GreetingsView: DCBaseView {
+    
     private let helloLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello, tell me your name please:"
-        label.textColor = .systemCyan
+        label.textColor = .white
         label.font = .systemFont(ofSize: 30, weight: .heavy)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -20,10 +21,14 @@ class GreetingsView: DCBaseView {
     
     private let nameTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .systemOrange
+        textField.backgroundColor = .white
+        textField.font = .systemFont(ofSize: 30, weight: .bold)
         textField.attributedPlaceholder = NSAttributedString(
             string: "Enter your name",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+            attributes: [
+                .foregroundColor: UIColor.systemGray,
+                .font: UIFont.systemFont(ofSize: 20, weight: .bold)
+                        ]
         )
         textField.layer.cornerRadius = 10
         return textField
@@ -33,6 +38,8 @@ class GreetingsView: DCBaseView {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
         button.backgroundColor = .systemPink
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
         button.layer.cornerRadius = 10
         return button
     }()
@@ -73,7 +80,5 @@ extension GreetingsView {
     
     override func configureViews() {
         super.configureViews()
-        
-        continueButton.setTitleColor(.white, for: .normal)
     }
 }
