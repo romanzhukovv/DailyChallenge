@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */; };
+		FC46DEDD2933D8D0007954D3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEDC2933D8D0007954D3 /* TabBarController.swift */; };
+		FC46DEDF2933DD0F007954D3 /* StartChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */; };
+		FC46DEE12933DD32007954D3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEE02933DD32007954D3 /* ProgressViewController.swift */; };
+		FC46DEE32933F243007954D3 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEE22933F242007954D3 /* ChallengeViewController.swift */; };
 		FC91AF71292FB0F700A4D352 /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */; };
 		FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9825292D0BE40028A239 /* DCBaseView.swift */; };
 		FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9D9828292D0D450028A239 /* GreetingsView.swift */; };
@@ -25,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPickerViewController.swift; sourceTree = "<group>"; };
+		FC46DEDC2933D8D0007954D3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChallengeViewController.swift; sourceTree = "<group>"; };
+		FC46DEE02933DD32007954D3 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		FC46DEE22933F242007954D3 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		FC9D9825292D0BE40028A239 /* DCBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCBaseView.swift; sourceTree = "<group>"; };
 		FC9D9828292D0D450028A239 /* GreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsView.swift; sourceTree = "<group>"; };
@@ -56,6 +64,10 @@
 		FC46DEDB2933D7C5007954D3 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				FC46DEDC2933D8D0007954D3 /* TabBarController.swift */,
+				FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */,
+				FC46DEE22933F242007954D3 /* ChallengeViewController.swift */,
+				FC46DEE02933DD32007954D3 /* ProgressViewController.swift */,
 			);
 			name = MainFlow;
 			sourceTree = "<group>";
@@ -241,13 +253,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC46DEE12933DD32007954D3 /* ProgressViewController.swift in Sources */,
 				FCA9A982292A60D500B5217E /* GreetingsViewController.swift in Sources */,
+				FC46DEDD2933D8D0007954D3 /* TabBarController.swift in Sources */,
 				FCA9A9A3292A73BA00B5217E /* UIView + ext.swift in Sources */,
 				FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */,
 				FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */,
+				FC46DEDF2933DD0F007954D3 /* StartChallengeViewController.swift in Sources */,
 				FCA9A999292A688900B5217E /* Resources.swift in Sources */,
 				FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */,
 				FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */,
+				FC46DEE32933F243007954D3 /* ChallengeViewController.swift in Sources */,
 				FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */,
 				FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */,
 				FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */,
