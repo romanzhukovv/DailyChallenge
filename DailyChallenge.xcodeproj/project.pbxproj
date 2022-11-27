@@ -53,6 +53,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC46DEDB2933D7C5007954D3 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MainFlow;
+			sourceTree = "<group>";
+		};
 		FC9D9827292D0D1F0028A239 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,10 +118,9 @@
 		FCA9A992292A62E600B5217E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCA9A9A1292A698A00B5217E /* Onboarding */,
 				FCA9A995292A654400B5217E /* Base */,
-				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
-				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
+				FCA9A9A1292A698A00B5217E /* Onboarding */,
+				FC46DEDB2933D7C5007954D3 /* MainFlow */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 			children = (
 				FC9D9827292D0D1F0028A239 /* Views */,
 				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
+				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
+				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";

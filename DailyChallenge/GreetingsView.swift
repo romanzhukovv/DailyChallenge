@@ -21,12 +21,13 @@ class GreetingsView: DCBaseView {
     
     private let nameTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .white
+        textField.backgroundColor = .systemGray
         textField.font = .systemFont(ofSize: 30, weight: .bold)
+        textField.textColor = .white
         textField.attributedPlaceholder = NSAttributedString(
             string: "Enter your name",
             attributes: [
-                .foregroundColor: UIColor.systemGray,
+                .foregroundColor: UIColor.systemGray2,
                 .font: UIFont.systemFont(ofSize: 20, weight: .bold)
                         ]
         )
@@ -46,6 +47,10 @@ class GreetingsView: DCBaseView {
     
     func buttonAction(_ action: Selector, target: Any?) {
         continueButton.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+    func nameWasEnter() -> Bool {
+        nameTextField.text?.count ?? 0 > 1
     }
 }
 

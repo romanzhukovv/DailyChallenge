@@ -42,7 +42,10 @@ extension GreetingsViewController {
     @objc func buttonTapped() {
         let vc = CategoriesPickerViewController()
         navigationItem.backButtonTitle = ""
-        navigationController?.pushViewController(vc, animated: true)
+        
+        if greetingsView.nameWasEnter() {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
