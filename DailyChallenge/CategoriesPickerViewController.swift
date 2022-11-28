@@ -87,12 +87,20 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         if ((cell?.isSelected) != nil) {
+            continueButton.isHidden = false
             cell?.contentView.backgroundColor = .systemBlue
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
+        
+        let indexes = collectionView.indexPathsForSelectedItems ?? nil
+        
+        if indexes?.isEmpty ?? false  {
+            print("desel")
+            continueButton.isHidden = true
+        }
         cell?.contentView.backgroundColor = .systemPink
     }
 
