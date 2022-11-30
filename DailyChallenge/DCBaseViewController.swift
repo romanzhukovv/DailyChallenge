@@ -27,6 +27,6 @@ class DCBaseViewController: UIViewController {
     }
     
     func configureViews() {
-//        view.backgroundColor = .black
+        view.backgroundColor = .black
     }
 }

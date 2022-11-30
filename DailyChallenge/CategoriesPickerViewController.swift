@@ -9,9 +9,20 @@ import UIKit
 
 final class CategoriesPickerViewController: DCBaseViewController {
     
+    private let aboutPickerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Choose 5 categories:"
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 30, weight: .heavy)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     private let collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        collectionView.backgroundColor = .black
         return collectionView
     }()
     
@@ -35,6 +46,7 @@ final class CategoriesPickerViewController: DCBaseViewController {
 extension CategoriesPickerViewController {
     override func addViews() {
         super.addViews()
+        view.setupView(aboutPickerLabel)
         view.setupView(collectionView)
         view.setupView(continueButton)
     }
@@ -43,9 +55,13 @@ extension CategoriesPickerViewController {
         super.layoutViews()
         
         NSLayoutConstraint.activate([
+            aboutPickerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            aboutPickerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            aboutPickerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            collectionView.topAnchor.constraint(equalTo: aboutPickerLabel.bottomAnchor, constant: 30),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
             
             continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -58,7 +74,7 @@ extension CategoriesPickerViewController {
     override func configureViews() {
         super.configureViews()
         
-        view.backgroundColor = .white
+//        view.backgroundColor = .white
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -98,9 +114,9 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
         let indexes = collectionView.indexPathsForSelectedItems ?? nil
         
         if indexes?.isEmpty ?? false  {
-            print("desel")
             continueButton.isHidden = true
         }
+        
         cell?.contentView.backgroundColor = .systemPink
     }
 
