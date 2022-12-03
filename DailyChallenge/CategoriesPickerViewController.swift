@@ -86,7 +86,9 @@ extension CategoriesPickerViewController {
     
     @objc func continueButtonTapped() {
         let tapBarVC = TabBarController()
-        navigationController?.pushViewController(tapBarVC, animated: true)
+//        navigationController?.pushViewController(tapBarVC, animated: true)
+        tapBarVC.modalPresentationStyle = .fullScreen
+        self.present(tapBarVC, animated: true, completion: nil)
     }
 }
 

@@ -25,6 +25,9 @@
 		FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A99B292A68EE00B5217E /* DataManager.swift */; };
 		FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A99D292A690E00B5217E /* StorageManager.swift */; };
 		FCA9A9A3292A73BA00B5217E /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9A9A2292A73BA00B5217E /* UIView + ext.swift */; };
+		FCC9DB7F293B809A008D7681 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */; };
+		FCC9DB81293B871C008D7681 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */; };
+		FCC9DB83293B872F008D7681 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		FCA9A99B292A68EE00B5217E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FCA9A99D292A690E00B5217E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		FCA9A9A2292A73BA00B5217E /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
+		FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +185,9 @@
 				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
 				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
 				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
+				FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */,
+				FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */,
+				FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
@@ -259,10 +268,13 @@
 				FCA9A9A3292A73BA00B5217E /* UIView + ext.swift in Sources */,
 				FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */,
 				FCA9A99C292A68EE00B5217E /* DataManager.swift in Sources */,
+				FCC9DB81293B871C008D7681 /* FirstPageViewController.swift in Sources */,
 				FC46DEDF2933DD0F007954D3 /* StartChallengeViewController.swift in Sources */,
+				FCC9DB7F293B809A008D7681 /* OnboardingPageViewController.swift in Sources */,
 				FCA9A999292A688900B5217E /* Resources.swift in Sources */,
 				FCA9A99E292A690E00B5217E /* StorageManager.swift in Sources */,
 				FCA33978292CA4A200C38E7B /* Challenge.swift in Sources */,
+				FCC9DB83293B872F008D7681 /* SecondPageViewController.swift in Sources */,
 				FC46DEE32933F243007954D3 /* ChallengeViewController.swift in Sources */,
 				FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */,
 				FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */,
