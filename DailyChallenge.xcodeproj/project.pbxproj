@@ -182,12 +182,12 @@
 			isa = PBXGroup;
 			children = (
 				FC9D9827292D0D1F0028A239 /* Views */,
-				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
-				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
-				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 				FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */,
 				FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */,
 				FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */,
+				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
+				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
+				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";

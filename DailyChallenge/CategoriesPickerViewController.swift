@@ -48,7 +48,7 @@ extension CategoriesPickerViewController {
         super.addViews()
         view.setupView(aboutPickerLabel)
         view.setupView(collectionView)
-        view.setupView(continueButton)
+//        view.setupView(continueButton)
     }
     
     override func layoutViews() {
@@ -64,17 +64,15 @@ extension CategoriesPickerViewController {
             collectionView.topAnchor.constraint(equalTo: aboutPickerLabel.bottomAnchor, constant: 30),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
             
-            continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            continueButton.widthAnchor.constraint(equalToConstant: 200),
-            continueButton.heightAnchor.constraint(equalToConstant: 50)
+//            continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+//            continueButton.widthAnchor.constraint(equalToConstant: 200),
+//            continueButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
     override func configureViews() {
         super.configureViews()
-        
-//        view.backgroundColor = .white
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -86,7 +84,6 @@ extension CategoriesPickerViewController {
     
     @objc func continueButtonTapped() {
         let tapBarVC = TabBarController()
-//        navigationController?.pushViewController(tapBarVC, animated: true)
         tapBarVC.modalPresentationStyle = .fullScreen
         self.present(tapBarVC, animated: true, completion: nil)
     }

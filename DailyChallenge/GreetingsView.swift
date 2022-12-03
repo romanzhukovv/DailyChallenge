@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GreetingsView: DCBaseView {
+class GreetingsView: DCBaseView, UITextFieldDelegate {
+    
+    var delegate: GreetingsViewDelegate?
     
     private let helloLabel: UILabel = {
         let label = UILabel()
@@ -45,12 +47,16 @@ class GreetingsView: DCBaseView {
         return button
     }()
     
-    func buttonAction(_ action: Selector, target: Any?) {
-        continueButton.addTarget(target, action: action, for: .touchUpInside)
-    }
+//    func buttonAction(_ action: Selector, target: Any?) {
+//        continueButton.addTarget(target, action: action, for: .touchUpInside)
+//    }
     
-    func nameWasEnter() -> Bool {
-        nameTextField.text?.count ?? 0 > 1
+//    func nameWasEnter() -> Bool {
+//        nameTextField.text?.count ?? 0 > 1
+//    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.nameDidChange()
     }
 }
 
@@ -60,7 +66,7 @@ extension GreetingsView {
         
         setupView(helloLabel)
         setupView(nameTextField)
-        setupView(continueButton)
+//        setupView(continueButton)
     }
     
     override func layoutViews() {
@@ -75,15 +81,16 @@ extension GreetingsView {
             nameTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameTextField.leadingAnchor.constraint(equalTo: helloLabel.leadingAnchor),
             nameTextField.heightAnchor.constraint(equalToConstant: 50),
-            
-            continueButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            continueButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-            continueButton.widthAnchor.constraint(equalToConstant: 200),
-            continueButton.heightAnchor.constraint(equalToConstant: 50)
+//
+//            continueButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+//            continueButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+//            continueButton.widthAnchor.constraint(equalToConstant: 200),
+//            continueButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
     override func configureViews() {
         super.configureViews()
+        nameTextField.delegate = self
     }
 }

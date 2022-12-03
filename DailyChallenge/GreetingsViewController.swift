@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol GreetingsViewDelegate {
+    func nameDidChange()
+}
+
 class GreetingsViewController: DCBaseViewController {
     
     private let greetingsView = GreetingsView()
     
+    var delegate: GreetingsViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        greetingsView.delegate = self
     }
 }
 
@@ -36,16 +44,19 @@ extension GreetingsViewController {
     
     override func configureViews() {
         super.configureViews()
-        greetingsView.buttonAction(#selector(buttonTapped), target: self)
+//        greetingsView.buttonAction(#selector(buttonTapped), target: self)
     }
     
-    @objc func buttonTapped() {
-        let vc = CategoriesPickerViewController()
-        navigationItem.backButtonTitle = ""
-        
-        if greetingsView.nameWasEnter() {
-            navigationController?.pushViewController(vc, animated: true)
-        }
+//    @objc func buttonTapped() {
+//        if greetingsView.nameWasEnter() {
+//            delegate?.nameDidEnter()
+//        }
+//    }
+}
+
+extension GreetingsViewController: GreetingsViewDelegate {
+    func nameDidChange() {
+        delegate?.nameDidEnter()
     }
 }
 
