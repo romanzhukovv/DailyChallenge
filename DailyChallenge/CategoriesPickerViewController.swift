@@ -8,6 +8,7 @@
 import UIKit
 
 final class CategoriesPickerViewController: DCBaseViewController {
+    var delegate: CategoriesPickerViewControllerDelegate?
     
     private let aboutPickerLabel: UILabel = {
         let label = UILabel()
@@ -78,15 +79,15 @@ extension CategoriesPickerViewController {
         collectionView.dataSource = self
         collectionView.allowsMultipleSelection = true
         
-        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
+//        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         continueButton.isHidden = true
     }
     
-    @objc func continueButtonTapped() {
-        let tapBarVC = TabBarController()
-        tapBarVC.modalPresentationStyle = .fullScreen
-        self.present(tapBarVC, animated: true, completion: nil)
-    }
+//    @objc func continueButtonTapped() {
+//        let tapBarVC = TabBarController()
+//        tapBarVC.modalPresentationStyle = .fullScreen
+//        self.present(tapBarVC, animated: true, completion: nil)
+//    }
 }
 
 extension CategoriesPickerViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -102,7 +103,8 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         if ((cell?.isSelected) != nil) {
-            continueButton.isHidden = false
+//            continueButton.isHidden = false
+            delegate?.categoriesDidSelect()
             cell?.contentView.backgroundColor = .systemBlue
         }
     }
@@ -113,7 +115,8 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
         let indexes = collectionView.indexPathsForSelectedItems ?? nil
         
         if indexes?.isEmpty ?? false  {
-            continueButton.isHidden = true
+//            continueButton.isHidden = true
+            delegate?.categoriesDidDeselect()
         }
         
         cell?.contentView.backgroundColor = .systemPink

@@ -8,7 +8,12 @@
 import UIKit
 
 protocol GreetingsViewControllerDelegate {
-    func nameDidEnter()
+    func nameDidEnter(nameTextCount: Int)
+}
+
+protocol CategoriesPickerViewControllerDelegate {
+    func categoriesDidSelect()
+    func categoriesDidDeselect()
 }
 
 class OnboardingPageViewController: UIPageViewController {
@@ -38,6 +43,7 @@ class OnboardingPageViewController: UIPageViewController {
         let page4 = CategoriesPickerViewController()
         
         page3.delegate = self
+        page4.delegate = self
         
         pages.append(page1)
         pages.append(page2)
@@ -76,8 +82,17 @@ class OnboardingPageViewController: UIPageViewController {
 }
 
 extension OnboardingPageViewController: GreetingsViewControllerDelegate {
-    func nameDidEnter() {
-//        setViewControllers([pages[pages.count - 1]], direction: .forward, animated: true, completion: nil)
+    func nameDidEnter(nameTextCount: Int) {
+        nextButton.isHidden = nameTextCount > 0 ? false : true
+    }
+}
+
+extension OnboardingPageViewController: CategoriesPickerViewControllerDelegate {
+    func categoriesDidDeselect() {
+        nextButton.isHidden = true
+    }
+    
+    func categoriesDidSelect() {
         nextButton.isHidden = false
     }
 }

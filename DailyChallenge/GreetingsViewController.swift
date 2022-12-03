@@ -8,7 +8,7 @@
 import UIKit
 
 protocol GreetingsViewDelegate {
-    func nameDidChange()
+    func nameDidChange(nameTextCount: Int)
 }
 
 class GreetingsViewController: DCBaseViewController {
@@ -55,8 +55,8 @@ extension GreetingsViewController {
 }
 
 extension GreetingsViewController: GreetingsViewDelegate {
-    func nameDidChange() {
-        delegate?.nameDidEnter()
+    func nameDidChange(nameTextCount: Int) {
+        delegate?.nameDidEnter(nameTextCount: nameTextCount)
     }
 }
 

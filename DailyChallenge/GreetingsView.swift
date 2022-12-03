@@ -55,9 +55,7 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
 //        nameTextField.text?.count ?? 0 > 1
 //    }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        delegate?.nameDidChange()
-    }
+
 }
 
 extension GreetingsView {
@@ -92,5 +90,11 @@ extension GreetingsView {
     override func configureViews() {
         super.configureViews()
         nameTextField.delegate = self
+        
+        nameTextField.addTarget(self, action: #selector(textFiledDidChange), for: .editingChanged)
+    }
+    
+    @objc func textFiledDidChange() {
+        delegate?.nameDidChange(nameTextCount: nameTextField.text?.count ?? 0)
     }
 }
