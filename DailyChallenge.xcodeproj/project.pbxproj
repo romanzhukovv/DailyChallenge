@@ -82,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				FC9D9828292D0D450028A239 /* GreetingsView.swift */,
+				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -187,7 +188,6 @@
 				FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */,
 				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
 				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
-				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 			);
 			name = Onboarding;
 			sourceTree = "<group>";
