@@ -83,18 +83,19 @@ class OnboardingPageViewController: UIPageViewController {
 
 @objc extension OnboardingPageViewController {
     func nextButtonTapped() {
-        
         if initialPage < pages.count - 1 {
             initialPage += 1
-            nextButton.isHidden = initialPage > 1 ? true : false
             setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
+            nextButton.isHidden = initialPage > 1 ? true : false
             barProgress += 0.25
             onboardingProgressView.setProgress(barProgress, animated: true)
         } else {
             onboardingProgressView.setProgress(1.0, animated: true)
             let tapBarVC = TabBarController()
             tapBarVC.modalPresentationStyle = .fullScreen
-            self.present(tapBarVC, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                self.present(tapBarVC, animated: true, completion: nil)
+            }
         }
     }
 }
