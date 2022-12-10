@@ -10,8 +10,6 @@ import UIKit
 final class ProgressViewController: DCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemBackground
         title = "Progress"
     }
 }

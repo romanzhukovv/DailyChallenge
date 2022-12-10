@@ -9,8 +9,8 @@ import UIKit
 
 final class FirstPageViewController: DCBaseViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGray
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        view.backgroundColor = .systemGray
+//    }
 }

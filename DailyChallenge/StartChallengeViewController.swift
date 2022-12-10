@@ -22,7 +22,6 @@ final class StartChallengeViewController: DCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
         title = "Start"
     }
 }

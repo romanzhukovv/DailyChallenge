@@ -42,9 +42,6 @@ class OnboardingPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        dataSource = self
-//        delegate = self
-        
         let page1 = FirstPageViewController()
         let page2 = SecondPageViewController()
         let page3 = GreetingsViewController()
@@ -115,33 +112,3 @@ extension OnboardingPageViewController: CategoriesPickerViewControllerDelegate {
         nextButton.isHidden = false
     }
 }
-
-//extension OnboardingPageViewController: UIPageViewControllerDataSource {
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-//
-//        guard let vc = viewController as? DCBaseViewController else { return nil}
-//        guard let currentIndex = pages.firstIndex(of: vc) else { return nil }
-//
-//        if currentIndex > 0 {
-//            return pages[currentIndex - 1]
-//        } else {
-//            return nil
-//        }
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-//
-//        guard let vc = viewController as? DCBaseViewController else { return nil }
-//        guard let currentIndex = pages.firstIndex(of: vc) else { return nil }
-//
-//        if currentIndex < pages.count - 1 {
-//            return pages[currentIndex + 1]
-//        } else {
-//            return nil
-//        }
-//    }
-//}
-
-//extension OnboardingPageViewController: UIPageViewControllerDelegate {
-//
-//}

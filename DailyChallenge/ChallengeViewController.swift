@@ -10,7 +10,5 @@ import UIKit
 final class ChallengeViewController: DCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
     }
 }

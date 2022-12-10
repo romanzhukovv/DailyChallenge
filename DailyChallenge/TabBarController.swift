@@ -11,7 +11,9 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
+//        view.backgroundColor = .systemBackground
+        tabBar.tintColor = .systemPink
+        tabBar.unselectedItemTintColor = .white
         
         let vc1 = UINavigationController(rootViewController: StartChallengeViewController())
         let vc2 = UINavigationController(rootViewController: ProgressViewController())
