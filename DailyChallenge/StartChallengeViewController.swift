@@ -23,6 +23,8 @@ final class StartChallengeViewController: DCBaseViewController {
         super.viewDidLoad()
         
         title = "Start"
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
 

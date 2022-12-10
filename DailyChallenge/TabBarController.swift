@@ -21,6 +21,9 @@ class TabBarController: UITabBarController {
         vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "bell")
         
+        vc1.tabBarItem.title = "Start"
+        vc2.tabBarItem.title = "Progress"
+        
         viewControllers = [vc1, vc2]
         
         navigationItem.hidesBackButton = true

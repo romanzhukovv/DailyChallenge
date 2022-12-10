@@ -11,5 +11,7 @@ final class ProgressViewController: DCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Progress"
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }
