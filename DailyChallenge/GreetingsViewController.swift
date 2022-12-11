@@ -41,17 +41,6 @@ extension GreetingsViewController {
         ])
         
     }
-    
-    override func configureViews() {
-        super.configureViews()
-//        greetingsView.buttonAction(#selector(buttonTapped), target: self)
-    }
-    
-//    @objc func buttonTapped() {
-//        if greetingsView.nameWasEnter() {
-//            delegate?.nameDidEnter()
-//        }
-//    }
 }
 
 extension GreetingsViewController: GreetingsViewDelegate {

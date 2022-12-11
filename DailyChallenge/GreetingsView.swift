@@ -36,35 +36,13 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
         textField.layer.cornerRadius = 10
         return textField
     }()
-    
-    private let continueButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Continue", for: .normal)
-        button.backgroundColor = .systemPink
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
-        button.layer.cornerRadius = 10
-        return button
-    }()
-    
-//    func buttonAction(_ action: Selector, target: Any?) {
-//        continueButton.addTarget(target, action: action, for: .touchUpInside)
-//    }
-    
-//    func nameWasEnter() -> Bool {
-//        nameTextField.text?.count ?? 0 > 1
-//    }
-    
-
 }
 
 extension GreetingsView {
     override func addViews() {
         super.addViews()
         
-        setupView(helloLabel)
-        setupView(nameTextField)
-//        setupView(continueButton)
+        setupView(helloLabel, nameTextField)
     }
     
     override func layoutViews() {
@@ -78,19 +56,13 @@ extension GreetingsView {
             nameTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             nameTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameTextField.leadingAnchor.constraint(equalTo: helloLabel.leadingAnchor),
-            nameTextField.heightAnchor.constraint(equalToConstant: 50),
-//
-//            continueButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            continueButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
-//            continueButton.widthAnchor.constraint(equalToConstant: 200),
-//            continueButton.heightAnchor.constraint(equalToConstant: 50)
+            nameTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
     override func configureViews() {
         super.configureViews()
         nameTextField.delegate = self
-        
         nameTextField.addTarget(self, action: #selector(textFiledDidChange), for: .editingChanged)
     }
     

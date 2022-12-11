@@ -8,6 +8,7 @@
 import UIKit
 
 final class CategoriesPickerViewController: DCBaseViewController {
+    
     var delegate: CategoriesPickerViewControllerDelegate?
     
     private let aboutPickerLabel: UILabel = {
@@ -27,19 +28,8 @@ final class CategoriesPickerViewController: DCBaseViewController {
         return collectionView
     }()
     
-    private let continueButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Continue", for: .normal)
-        button.backgroundColor = .systemPink
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
-        button.layer.cornerRadius = 10
-        return button
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.register(CategoryViewCell.self, forCellWithReuseIdentifier: CategoryViewCell.reuseId)
     }
 }
@@ -47,9 +37,8 @@ final class CategoriesPickerViewController: DCBaseViewController {
 extension CategoriesPickerViewController {
     override func addViews() {
         super.addViews()
-        view.setupView(aboutPickerLabel)
-        view.setupView(collectionView)
-//        view.setupView(continueButton)
+        
+        view.setupView(aboutPickerLabel, collectionView)
     }
     
     override func layoutViews() {
@@ -63,12 +52,7 @@ extension CategoriesPickerViewController {
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             collectionView.topAnchor.constraint(equalTo: aboutPickerLabel.bottomAnchor, constant: 30),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200),
-            
-//            continueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            continueButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-//            continueButton.widthAnchor.constraint(equalToConstant: 200),
-//            continueButton.heightAnchor.constraint(equalToConstant: 50)
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200)
         ])
     }
     
@@ -78,16 +62,7 @@ extension CategoriesPickerViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.allowsMultipleSelection = true
-        
-//        continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
-        continueButton.isHidden = true
     }
-    
-//    @objc func continueButtonTapped() {
-//        let tapBarVC = TabBarController()
-//        tapBarVC.modalPresentationStyle = .fullScreen
-//        self.present(tapBarVC, animated: true, completion: nil)
-//    }
 }
 
 extension CategoriesPickerViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -102,8 +77,8 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
+        
         if ((cell?.isSelected) != nil) {
-//            continueButton.isHidden = false
             delegate?.categoriesDidSelect()
             cell?.contentView.backgroundColor = .systemBlue
         }
@@ -111,11 +86,9 @@ extension CategoriesPickerViewController: UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        
         let indexes = collectionView.indexPathsForSelectedItems ?? nil
         
         if indexes?.isEmpty ?? false  {
-//            continueButton.isHidden = true
             delegate?.categoriesDidDeselect()
         }
         
