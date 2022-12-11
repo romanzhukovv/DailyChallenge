@@ -21,7 +21,6 @@ final class SecondPageViewController: DCBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
     }
 }
 
@@ -29,7 +28,7 @@ extension SecondPageViewController {
     override func addViews() {
         super.addViews()
         
-        view.setupView(descriptionAppLabel)
+        view.setupViews(descriptionAppLabel)
     }
     
     override func layoutViews() {

@@ -22,21 +22,25 @@ class OnboardingPageViewController: UIPageViewController {
     private var initialPage = 0
     private var barProgress: Float = 0.0
     
+    private let onboardingProgressView: UIProgressView = {
+        let progressView = UIProgressView(progressViewStyle: .default)
+        progressView.tintColor = Resources.Colors.accent
+        progressView.trackTintColor = .white
+        return progressView
+    }()
+    
     private let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Continue", for: .normal)
-        button.backgroundColor = .systemPink
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
-        button.layer.cornerRadius = 10
+        let button = UIButton(type: .custom)
+        button.setImage(Resources.Images.nextButton, for: .normal)
         return button
     }()
     
-    private let onboardingProgressView: UIProgressView = {
-        let progressView = UIProgressView(progressViewStyle: .bar)
-        progressView.tintColor = .systemPink
-        progressView.trackTintColor = .white
-        return progressView
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.spacing = 12
+        return stackView
     }()
 
     override func viewDidLoad() {
@@ -57,19 +61,17 @@ class OnboardingPageViewController: UIPageViewController {
         
         setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
         
-        view.setupView(nextButton)
-        view.setupView(onboardingProgressView)
+        view.setupViews(stackView)
+        stackView.addArrangedSubview(onboardingProgressView)
+        stackView.addArrangedSubview(nextButton)
         
         NSLayoutConstraint.activate([
-            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            nextButton.widthAnchor.constraint(equalToConstant: 200),
-            nextButton.heightAnchor.constraint(equalToConstant: 50),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             
-            onboardingProgressView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            onboardingProgressView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150),
-            onboardingProgressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
-            onboardingProgressView.heightAnchor.constraint(equalToConstant: 2)
+            onboardingProgressView.heightAnchor.constraint(equalToConstant: 3),
+            
         ])
         
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
@@ -84,7 +86,8 @@ class OnboardingPageViewController: UIPageViewController {
             initialPage += 1
             setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
             
-            nextButton.isHidden = initialPage > 1 ? true : false
+//            nextButton.isHidden = initialPage > 1 ? true : false
+            nextButton.isEnabled = initialPage > 1 ? false : true
             
             barProgress += 0.25
             onboardingProgressView.setProgress(barProgress, animated: true)
@@ -102,16 +105,19 @@ class OnboardingPageViewController: UIPageViewController {
 
 extension OnboardingPageViewController: GreetingsViewControllerDelegate {
     func nameDidEnter(nameTextCount: Int) {
-        nextButton.isHidden = nameTextCount > 0 ? false : true
+//        nextButton.isHidden = nameTextCount > 0 ? false : true
+        nextButton.isEnabled = nameTextCount > 0 ? true : false
     }
 }
 
 extension OnboardingPageViewController: CategoriesPickerViewControllerDelegate {
     func categoriesDidDeselect() {
-        nextButton.isHidden = true
+//        nextButton.isHidden = true
+        nextButton.isEnabled = false
     }
     
     func categoriesDidSelect() {
-        nextButton.isHidden = false
+//        nextButton.isHidden = false
+        nextButton.isEnabled = true
     }
 }

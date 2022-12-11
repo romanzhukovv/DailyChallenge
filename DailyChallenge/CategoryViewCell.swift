@@ -13,7 +13,7 @@ class CategoryViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        contentView.backgroundColor = .systemPink
+        contentView.backgroundColor = Resources.Colors.accent
     }
     
     required init?(coder: NSCoder) {

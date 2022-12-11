@@ -24,7 +24,7 @@ final class CategoriesPickerViewController: DCBaseViewController {
     private let collectionView: UICollectionView = {
         let viewLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = Resources.Colors.background
         return collectionView
     }()
     
@@ -38,7 +38,7 @@ extension CategoriesPickerViewController {
     override func addViews() {
         super.addViews()
         
-        view.setupView(aboutPickerLabel, collectionView)
+        view.setupViews(aboutPickerLabel, collectionView)
     }
     
     override func layoutViews() {

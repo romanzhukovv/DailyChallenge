@@ -13,9 +13,9 @@ protocol GreetingsViewDelegate {
 
 class GreetingsViewController: DCBaseViewController {
     
-    private let greetingsView = GreetingsView()
-    
     var delegate: GreetingsViewControllerDelegate?
+    
+    private let greetingsView = GreetingsView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,8 @@ class GreetingsViewController: DCBaseViewController {
 extension GreetingsViewController {
     override func addViews() {
         super.addViews()
-        view.setupView(greetingsView)
+        
+        view.setupViews(greetingsView)
     }
     
     override func layoutViews() {

@@ -40,7 +40,7 @@ extension FirstPageViewController {
     override func addViews() {
         super.addViews()
         
-        view.setupView(helloLabel, overviewLabel)
+        view.setupViews(helloLabel, overviewLabel)
     }
     
     override func layoutViews() {

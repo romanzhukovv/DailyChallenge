@@ -5,11 +5,12 @@
 //  Created by Roman Zhukov on 20.11.2022.
 //
 
-import Foundation
+import UIKit
 
 enum Resources {
     enum Colors {
-        
+        static let background = UIColor(hexString: "#161616")
+        static let accent = UIColor(hexString: "#DA4382")
     }
     
     enum Strings {
@@ -20,5 +21,9 @@ enum Resources {
                         Следи за своей статистикой.
                         """
         }
+    }
+    
+    enum Images {
+        static let nextButton = UIImage(named: "nextButton")
     }
 }

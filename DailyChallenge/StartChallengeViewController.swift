@@ -12,7 +12,7 @@ final class StartChallengeViewController: DCBaseViewController {
     private let startButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Start", for: .normal)
-        button.backgroundColor = .systemPink
+        button.backgroundColor = Resources.Colors.accent
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
         button.layer.cornerRadius = 10
@@ -32,7 +32,7 @@ extension StartChallengeViewController {
     override func addViews() {
         super.addViews()
         
-        view.setupView(startButton)
+        view.setupViews(startButton)
     }
     
     override func layoutViews() {

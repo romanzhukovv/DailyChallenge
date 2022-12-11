@@ -42,7 +42,7 @@ extension GreetingsView {
     override func addViews() {
         super.addViews()
         
-        setupView(helloLabel, nameTextField)
+        setupViews(helloLabel, nameTextField)
     }
     
     override func layoutViews() {
