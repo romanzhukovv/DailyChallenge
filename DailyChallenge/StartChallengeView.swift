@@ -15,9 +15,14 @@ final class StartChallengeView: DCBaseView {
         button.backgroundColor = Resources.Colors.accent
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
-        button.layer.cornerRadius = 10
         return button
     }()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        startButton.layer.cornerRadius = startButton.frame.width / 2
+    }
     
     func startButtonAction(_ target: Any?, with action: Selector, for controlEvent: UIControl.Event) {
         startButton.addTarget(target, action: action, for: controlEvent)
@@ -36,7 +41,9 @@ extension StartChallengeView {
         
         NSLayoutConstraint.activate([
             startButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: centerYAnchor)
+            startButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            startButton.widthAnchor.constraint(equalToConstant: 100),
+            startButton.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
 }
