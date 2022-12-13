@@ -9,7 +9,7 @@ import UIKit
 
 final class StartChallengeView: DCBaseView {
     
-    let startButton: UIButton = {
+    private let startButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Start", for: .normal)
         button.backgroundColor = Resources.Colors.accent
@@ -18,6 +18,10 @@ final class StartChallengeView: DCBaseView {
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    func startButtonAction(_ target: Any?, with action: Selector, for controlEvent: UIControl.Event) {
+        startButton.addTarget(target, action: action, for: controlEvent)
+    }
 }
 
 extension StartChallengeView {
@@ -34,11 +38,5 @@ extension StartChallengeView {
             startButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             startButton.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-    }
-    
-    override func configureViews() {
-        super.configureViews()
-        
-//        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
 }

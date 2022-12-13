@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CategoriesPickerViewController: DCBaseViewController {
+final class CategoriesPickerViewController: UIViewController {
     
     var delegate: CategoriesPickerViewControllerDelegate?
     
@@ -31,18 +31,8 @@ final class CategoriesPickerViewController: DCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(CategoryViewCell.self, forCellWithReuseIdentifier: CategoryViewCell.reuseId)
-    }
-}
-
-extension CategoriesPickerViewController {
-    override func addViews() {
-        super.addViews()
         
         view.setupViews(aboutPickerLabel, collectionView)
-    }
-    
-    override func layoutViews() {
-        super.layoutViews()
         
         NSLayoutConstraint.activate([
             aboutPickerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
@@ -54,10 +44,6 @@ extension CategoriesPickerViewController {
             collectionView.topAnchor.constraint(equalTo: aboutPickerLabel.bottomAnchor, constant: 30),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200)
         ])
-    }
-    
-    override func configureViews() {
-        super.configureViews()
         
         collectionView.delegate = self
         collectionView.dataSource = self

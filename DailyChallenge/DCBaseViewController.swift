@@ -7,26 +7,33 @@
 
 import UIKit
 
-class DCBaseViewController: UIViewController {
+class DCBaseViewController<CustomView: UIView>: UIViewController, HasCustomView {
+    typealias CustomView = CustomView
+    
+    override func loadView() {
+        let rootView = CustomView()
+        view = rootView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addViews()
-        layoutViews()
-        configureViews()
+//        addViews()
+//        layoutViews()
+//        configureViews()
     }
 }
 
-@objc extension DCBaseViewController {
-    func addViews() {
-        
-    }
-    
-    func layoutViews() {
-        
-    }
-    
-    func configureViews() {
-        view.backgroundColor = Resources.Colors.background
-    }
-}
+//@objc extension DCBaseViewController {
+//    func addViews() {
+//
+//    }
+//
+//    func layoutViews() {
+//
+//    }
+//
+//    func configureViews() {
+//        view.backgroundColor = Resources.Colors.background
+//    }
+//}

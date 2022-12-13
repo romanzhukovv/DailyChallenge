@@ -50,7 +50,7 @@ extension GreetingsView {
         
         NSLayoutConstraint.activate([
             helloLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            helloLabel.topAnchor.constraint(equalTo: topAnchor, constant: 100),
+            helloLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100),
             helloLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             
             nameTextField.centerXAnchor.constraint(equalTo: centerXAnchor),

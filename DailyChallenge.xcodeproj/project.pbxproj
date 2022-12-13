@@ -10,6 +10,8 @@
 		FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */; };
 		FC1226A8294906D70077652C /* StartChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1226A7294906D70077652C /* StartChallengeView.swift */; };
 		FC1226AA29490EAC0077652C /* UIViewController+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1226A929490EAC0077652C /* UIViewController+ext.swift */; };
+		FC1226AC29491B8F0077652C /* FirstPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1226AB29491B8F0077652C /* FirstPageView.swift */; };
+		FC1226AE29491D4C0077652C /* SecondPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1226AD29491D4C0077652C /* SecondPageView.swift */; };
 		FC46DEDD2933D8D0007954D3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEDC2933D8D0007954D3 /* TabBarController.swift */; };
 		FC46DEDF2933DD0F007954D3 /* StartChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */; };
 		FC46DEE12933DD32007954D3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46DEE02933DD32007954D3 /* ProgressViewController.swift */; };
@@ -36,6 +38,8 @@
 		FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPickerViewController.swift; sourceTree = "<group>"; };
 		FC1226A7294906D70077652C /* StartChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChallengeView.swift; sourceTree = "<group>"; };
 		FC1226A929490EAC0077652C /* UIViewController+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ext.swift"; sourceTree = "<group>"; };
+		FC1226AB29491B8F0077652C /* FirstPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageView.swift; sourceTree = "<group>"; };
+		FC1226AD29491D4C0077652C /* SecondPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageView.swift; sourceTree = "<group>"; };
 		FC46DEDC2933D8D0007954D3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChallengeViewController.swift; sourceTree = "<group>"; };
 		FC46DEE02933DD32007954D3 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		FC9D9827292D0D1F0028A239 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC1226AB29491B8F0077652C /* FirstPageView.swift */,
+				FC1226AD29491D4C0077652C /* SecondPageView.swift */,
 				FC9D9828292D0D450028A239 /* GreetingsView.swift */,
 				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 			);
@@ -274,6 +280,7 @@
 				FC1226A8294906D70077652C /* StartChallengeView.swift in Sources */,
 				FCA9A9A3292A73BA00B5217E /* UIView+ext.swift in Sources */,
 				FC04107B292F5AFC00D44961 /* CategoriesPickerViewController.swift in Sources */,
+				FC1226AC29491B8F0077652C /* FirstPageView.swift in Sources */,
 				FCC9DB81293B871C008D7681 /* FirstPageViewController.swift in Sources */,
 				FC46DEDF2933DD0F007954D3 /* StartChallengeViewController.swift in Sources */,
 				FCC9DB7F293B809A008D7681 /* OnboardingPageViewController.swift in Sources */,
@@ -287,6 +294,7 @@
 				FCA9A97E292A60D500B5217E /* AppDelegate.swift in Sources */,
 				FC9D9829292D0D450028A239 /* GreetingsView.swift in Sources */,
 				FC9D9826292D0BE40028A239 /* DCBaseView.swift in Sources */,
+				FC1226AE29491D4C0077652C /* SecondPageView.swift in Sources */,
 				FC91AF71292FB0F700A4D352 /* CategoryViewCell.swift in Sources */,
 				FCA9A997292A657E00B5217E /* DCBaseViewController.swift in Sources */,
 			);

@@ -11,36 +11,13 @@ protocol GreetingsViewDelegate {
     func nameDidChange(nameTextCount: Int)
 }
 
-class GreetingsViewController: DCBaseViewController {
+class GreetingsViewController: DCBaseViewController<GreetingsView> {
     
     var delegate: GreetingsViewControllerDelegate?
     
-    private let greetingsView = GreetingsView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        greetingsView.delegate = self
-    }
-}
-
-extension GreetingsViewController {
-    override func addViews() {
-        super.addViews()
-        
-        view.setupViews(greetingsView)
-    }
-    
-    override func layoutViews() {
-        super.layoutViews()
-        
-        NSLayoutConstraint.activate([
-            greetingsView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            greetingsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            greetingsView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            greetingsView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-        
+        rootView.delegate = self
     }
 }
 

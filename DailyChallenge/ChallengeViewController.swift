@@ -7,7 +7,8 @@
 
 import UIKit
 
-final class ChallengeViewController: DCBaseViewController {
+final class ChallengeViewController: DCBaseViewController<DCBaseView> {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProgressViewController: DCBaseViewController {
+final class ProgressViewController: DCBaseViewController<DCBaseView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Progress"

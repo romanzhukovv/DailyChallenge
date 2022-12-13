@@ -7,37 +7,9 @@
 
 import UIKit
 
-final class SecondPageViewController: DCBaseViewController {
-    
-    private let descriptionAppLabel: UILabel = {
-        let label = UILabel()
-        label.text = Resources.Strings.Onboarding.description
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 24, weight: .regular)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        return label
-    }()
+final class SecondPageViewController: DCBaseViewController<SecondPageView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-}
-
-extension SecondPageViewController {
-    override func addViews() {
-        super.addViews()
-        
-        view.setupViews(descriptionAppLabel)
-    }
-    
-    override func layoutViews() {
-        super.layoutViews()
-        
-        NSLayoutConstraint.activate([
-            descriptionAppLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            descriptionAppLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            descriptionAppLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
-        ])
     }
 }

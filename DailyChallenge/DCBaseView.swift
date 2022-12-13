@@ -31,6 +31,6 @@ class DCBaseView: UIView {
     }
     
     func configureViews() {
-        
+        backgroundColor = Resources.Colors.background
     }
 }
