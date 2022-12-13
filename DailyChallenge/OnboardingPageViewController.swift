@@ -86,7 +86,6 @@ class OnboardingPageViewController: UIPageViewController {
             initialPage += 1
             setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
             
-//            nextButton.isHidden = initialPage > 1 ? true : false
             nextButton.isEnabled = initialPage > 1 ? false : true
             
             barProgress += 0.25
@@ -105,19 +104,16 @@ class OnboardingPageViewController: UIPageViewController {
 
 extension OnboardingPageViewController: GreetingsViewControllerDelegate {
     func nameDidEnter(nameTextCount: Int) {
-//        nextButton.isHidden = nameTextCount > 0 ? false : true
         nextButton.isEnabled = nameTextCount > 0 ? true : false
     }
 }
 
 extension OnboardingPageViewController: CategoriesPickerViewControllerDelegate {
     func categoriesDidDeselect() {
-//        nextButton.isHidden = true
         nextButton.isEnabled = false
     }
     
     func categoriesDidSelect() {
-//        nextButton.isHidden = false
         nextButton.isEnabled = true
     }
 }

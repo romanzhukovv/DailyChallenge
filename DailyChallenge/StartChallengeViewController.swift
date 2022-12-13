@@ -7,17 +7,14 @@
 
 import UIKit
 
-final class StartChallengeViewController: DCBaseViewController {
+final class StartChallengeViewController: DCBaseViewController, HasCustomView {
     
-    private let startButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Start", for: .normal)
-        button.backgroundColor = Resources.Colors.accent
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 25, weight: .heavy)
-        button.layer.cornerRadius = 10
-        return button
-    }()
+    typealias CustomView = StartChallengeView
+    
+    override func loadView() {
+        let customView = StartChallengeView()
+        view = customView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,26 +26,6 @@ final class StartChallengeViewController: DCBaseViewController {
 }
 
 extension StartChallengeViewController {
-    override func addViews() {
-        super.addViews()
-        
-        view.setupViews(startButton)
-    }
-    
-    override func layoutViews() {
-        super.layoutViews()
-        
-        NSLayoutConstraint.activate([
-            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-    }
-    
-    override func configureViews() {
-        super.configureViews()
-        
-        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
-    }
     
     @objc private func startButtonTapped() {
         let vc = ChallengeViewController()
