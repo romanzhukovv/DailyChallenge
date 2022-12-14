@@ -7,78 +7,28 @@
 
 import UIKit
 
-final class CategoriesPickerViewController: UIViewController {
+protocol CategoriesPickerViewDelegate {
+    func categoriesDidSelect()
+    func categoriesDidDeselect()
+}
+
+final class CategoriesPickerViewController: DCBaseViewController<CategoriesPickerView> {
     
     var delegate: CategoriesPickerViewControllerDelegate?
     
-    private let aboutPickerLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Choose 5 categories:"
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 30, weight: .heavy)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    private let collectionView: UICollectionView = {
-        let viewLayout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-        collectionView.backgroundColor = Resources.Colors.background
-        return collectionView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(CategoryViewCell.self, forCellWithReuseIdentifier: CategoryViewCell.reuseId)
         
-        view.setupViews(aboutPickerLabel, collectionView)
-        
-        NSLayoutConstraint.activate([
-            aboutPickerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            aboutPickerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            aboutPickerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            collectionView.topAnchor.constraint(equalTo: aboutPickerLabel.bottomAnchor, constant: 30),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -200)
-        ])
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.allowsMultipleSelection = true
+        rootView.delegate = self
     }
 }
 
-extension CategoriesPickerViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+extension CategoriesPickerViewController: CategoriesPickerViewDelegate {
+    func categoriesDidSelect() {
+        delegate?.categoriesDidSelect()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryViewCell.reuseId, for: indexPath)
-        return cell
+    func categoriesDidDeselect() {
+        delegate?.categoriesDidDeselect()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        
-        if ((cell?.isSelected) != nil) {
-            delegate?.categoriesDidSelect()
-            cell?.contentView.backgroundColor = .systemBlue
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
-        let indexes = collectionView.indexPathsForSelectedItems ?? nil
-        
-        if indexes?.isEmpty ?? false  {
-            delegate?.categoriesDidDeselect()
-        }
-        
-        cell?.contentView.backgroundColor = .systemPink
-    }
-
 }
