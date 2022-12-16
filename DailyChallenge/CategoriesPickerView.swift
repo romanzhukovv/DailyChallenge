@@ -9,7 +9,7 @@ import UIKit
 
 final class CategoriesPickerView: DCBaseView {
     
-    var delegate: CategoriesPickerViewDelegate?
+    weak var delegate: CategoriesPickerViewDelegate?
     
     private let aboutPickerLabel: UILabel = {
         let label = UILabel()

@@ -9,7 +9,7 @@ import UIKit
 
 class GreetingsView: DCBaseView, UITextFieldDelegate {
     
-    var delegate: GreetingsViewDelegate?
+    weak var delegate: GreetingsViewDelegate?
     
     private let helloLabel: UILabel = {
         let label = UILabel()
@@ -47,6 +47,12 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        endEditing(true)
+    }
 }
 
 extension GreetingsView {
@@ -81,13 +87,13 @@ extension GreetingsView {
         delegate?.nameDidChange(nameTextCount: nameTextField.text?.count ?? 0)
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow() {
         if frame.origin.y == 0 {
             frame.origin.y -= 70
         }
     }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide() {
         if frame.origin.y != 0 {
             frame.origin.y = 0
         }

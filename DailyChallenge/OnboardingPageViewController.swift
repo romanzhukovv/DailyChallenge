@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol GreetingsViewControllerDelegate {
+protocol GreetingsViewControllerDelegate: AnyObject {
     func nameDidEnter(nameTextCount: Int)
 }
 
-protocol CategoriesPickerViewControllerDelegate {
+protocol CategoriesPickerViewControllerDelegate: AnyObject {
     func categoriesDidSelect()
     func categoriesDidDeselect()
 }
@@ -42,7 +42,7 @@ class OnboardingPageViewController: UIPageViewController {
         stackView.spacing = 12
         return stackView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,6 +78,10 @@ class OnboardingPageViewController: UIPageViewController {
         
         onboardingProgressView.setProgress(barProgress, animated: true)
     }
+    
+    deinit {
+        print("deinit \(self)")
+    }
 }
 
 @objc extension OnboardingPageViewController {
@@ -95,6 +99,7 @@ class OnboardingPageViewController: UIPageViewController {
             
             let tapBarVC = TabBarController()
             tapBarVC.modalPresentationStyle = .fullScreen
+            pages = []
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                 self.present(tapBarVC, animated: true, completion: nil)
             }

@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol CategoriesPickerViewDelegate {
+protocol CategoriesPickerViewDelegate: AnyObject {
     func categoriesDidSelect()
     func categoriesDidDeselect()
 }
 
 final class CategoriesPickerViewController: DCBaseViewController<CategoriesPickerView> {
     
-    var delegate: CategoriesPickerViewControllerDelegate?
+    weak var delegate: CategoriesPickerViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

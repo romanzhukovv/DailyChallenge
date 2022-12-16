@@ -10,6 +10,15 @@ import UIKit
 class DCBaseViewController<CustomView: UIView>: UIViewController, HasCustomView {
     typealias CustomView = CustomView
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print(self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         let rootView = CustomView()
         view = rootView
@@ -17,23 +26,9 @@ class DCBaseViewController<CustomView: UIView>: UIViewController, HasCustomView 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        addViews()
-//        layoutViews()
-//        configureViews()
+    }
+    
+    deinit {
+        print("deinit \(self)")
     }
 }
-
-//@objc extension DCBaseViewController {
-//    func addViews() {
-//
-//    }
-//
-//    func layoutViews() {
-//
-//    }
-//
-//    func configureViews() {
-//        view.backgroundColor = Resources.Colors.background
-//    }
-//}

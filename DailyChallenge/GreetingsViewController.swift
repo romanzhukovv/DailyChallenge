@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol GreetingsViewDelegate {
+protocol GreetingsViewDelegate: AnyObject {
     func nameDidChange(nameTextCount: Int)
 }
 
 class GreetingsViewController: DCBaseViewController<GreetingsView> {
     
-    var delegate: GreetingsViewControllerDelegate?
+    weak var delegate: GreetingsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
