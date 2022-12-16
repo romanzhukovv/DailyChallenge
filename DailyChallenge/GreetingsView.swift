@@ -36,6 +36,17 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
         textField.layer.cornerRadius = 10
         return textField
     }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension GreetingsView {
@@ -68,5 +79,17 @@ extension GreetingsView {
     
     @objc func textFiledDidChange() {
         delegate?.nameDidChange(nameTextCount: nameTextField.text?.count ?? 0)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if frame.origin.y == 0 {
+            frame.origin.y -= 70
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if frame.origin.y != 0 {
+            frame.origin.y = 0
+        }
     }
 }
