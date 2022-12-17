@@ -26,6 +26,7 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
         textField.autocorrectionType = .no
         textField.smartQuotesType = .no
         textField.spellCheckingType = .no
+        textField.returnKeyType = .done
         textField.backgroundColor = .systemGray
         textField.font = .systemFont(ofSize: 30, weight: .bold)
         textField.textColor = .white
@@ -54,6 +55,10 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
+        endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         endEditing(true)
     }
 }
