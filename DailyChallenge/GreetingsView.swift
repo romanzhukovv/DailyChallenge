@@ -23,6 +23,9 @@ class GreetingsView: DCBaseView, UITextFieldDelegate {
     
     private let nameTextField: UITextField = {
         let textField = UITextField()
+        textField.autocorrectionType = .no
+        textField.smartQuotesType = .no
+        textField.spellCheckingType = .no
         textField.backgroundColor = .systemGray
         textField.font = .systemFont(ofSize: 30, weight: .bold)
         textField.textColor = .white
