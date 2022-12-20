@@ -132,8 +132,7 @@
 				FCA9A99A292A68D500B5217E /* Services */,
 				FCA9A995292A654400B5217E /* Base */,
 				FCA9A9A1292A698A00B5217E /* Onboarding */,
-				FCB2A535294D1403001DAC35 /* ChallengeStatus */,
-				FCB2A536294D14AC001DAC35 /* ChallengeFocus */,
+				FCCCD17829524E5A00D9CB96 /* Challenge */,
 				FCB2A533294D1377001DAC35 /* Progress */,
 				FCB2A534294D138C001DAC35 /* Settings */,
 				FC46DEDB2933D7C5007954D3 /* MainFlow */,
@@ -209,21 +208,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		FCB2A535294D1403001DAC35 /* ChallengeStatus */ = {
-			isa = PBXGroup;
-			children = (
-				FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */,
-				FC1226A7294906D70077652C /* StartChallengeView.swift */,
-			);
-			path = ChallengeStatus;
-			sourceTree = "<group>";
-		};
-		FCB2A536294D14AC001DAC35 /* ChallengeFocus */ = {
+		FCCCD17829524E5A00D9CB96 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
 				FC46DEE22933F242007954D3 /* ChallengeViewController.swift */,
+				FC1226A7294906D70077652C /* StartChallengeView.swift */,
+				FC46DEDE2933DD0F007954D3 /* StartChallengeViewController.swift */,
 			);
-			path = ChallengeFocus;
+			path = Challenge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

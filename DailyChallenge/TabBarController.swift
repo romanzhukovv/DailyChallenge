@@ -16,15 +16,23 @@ class TabBarController: UITabBarController {
         
         let vc1 = UINavigationController(rootViewController: StartChallengeViewController())
         let vc2 = UINavigationController(rootViewController: ProgressViewController())
-        
+
         vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "bell")
-        
+
         vc1.tabBarItem.title = "Start"
         vc2.tabBarItem.title = "Progress"
-        
+
         viewControllers = [vc1, vc2]
-        
+
         navigationItem.hidesBackButton = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let pageVC = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+
+        present(pageVC, animated: true)
     }
 }
