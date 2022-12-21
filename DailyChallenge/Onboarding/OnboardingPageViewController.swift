@@ -78,10 +78,6 @@ class OnboardingPageViewController: UIPageViewController {
         
         onboardingProgressView.setProgress(barProgress, animated: true)
     }
-    
-    deinit {
-        print("deinit \(self)")
-    }
 }
 
 @objc extension OnboardingPageViewController {

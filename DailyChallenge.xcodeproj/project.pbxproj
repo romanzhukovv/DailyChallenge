@@ -79,11 +79,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC46DEDB2933D7C5007954D3 /* MainFlow */ = {
+		FC021B302953A34E00DDC450 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FCA9A996292A657E00B5217E /* DCBaseViewController.swift */,
+				FC9D9825292D0BE40028A239 /* DCBaseView.swift */,
+				FC46DEDC2933D8D0007954D3 /* TabBarController.swift */,
 			);
-			name = MainFlow;
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FC021B312953A37500DDC450 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FC9D9827292D0D1F0028A239 /* Views */,
+				FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */,
+				FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */,
+				FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */,
+				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
+				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		FC9D9827292D0D1F0028A239 /* Views */ = {
@@ -96,6 +112,7 @@
 				FC4646642949A81600A1897A /* CategoriesPickerView.swift */,
 			);
 			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FCA33976292CA48900C38E7B /* Models */ = {
@@ -130,12 +147,11 @@
 				FCA9A994292A63A200B5217E /* Helpers */,
 				FCA33976292CA48900C38E7B /* Models */,
 				FCA9A99A292A68D500B5217E /* Services */,
-				FCA9A995292A654400B5217E /* Base */,
-				FCA9A9A1292A698A00B5217E /* Onboarding */,
+				FC021B302953A34E00DDC450 /* Base */,
+				FC021B312953A37500DDC450 /* Onboarding */,
 				FCCCD17829524E5A00D9CB96 /* Challenge */,
 				FCB2A533294D1377001DAC35 /* Progress */,
 				FCB2A534294D138C001DAC35 /* Settings */,
-				FC46DEDB2933D7C5007954D3 /* MainFlow */,
 			);
 			path = DailyChallenge;
 			sourceTree = "<group>";
@@ -162,35 +178,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		FCA9A995292A654400B5217E /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				FCA9A996292A657E00B5217E /* DCBaseViewController.swift */,
-				FC9D9825292D0BE40028A239 /* DCBaseView.swift */,
-				FC46DEDC2933D8D0007954D3 /* TabBarController.swift */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
 		FCA9A99A292A68D500B5217E /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				FCA9A99D292A690E00B5217E /* StorageManager.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		FCA9A9A1292A698A00B5217E /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				FC9D9827292D0D1F0028A239 /* Views */,
-				FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */,
-				FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */,
-				FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */,
-				FCA9A981292A60D500B5217E /* GreetingsViewController.swift */,
-				FC04107A292F5AFC00D44961 /* CategoriesPickerViewController.swift */,
-			);
-			name = Onboarding;
 			sourceTree = "<group>";
 		};
 		FCB2A533294D1377001DAC35 /* Progress */ = {
