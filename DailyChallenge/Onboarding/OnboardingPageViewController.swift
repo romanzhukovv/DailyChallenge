@@ -93,13 +93,10 @@ class OnboardingPageViewController: UIPageViewController {
         } else {
             onboardingProgressView.setProgress(1.0, animated: true)
             
-//            let tapBarVC = TabBarController()
-//            tapBarVC.modalPresentationStyle = .fullScreen
-//            pages = []
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-//                self.present(tapBarVC, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                StorageManager.shared.setOnboardingStatus()
                 self.dismiss(animated: true)
-//            }
+            }
         }
     }
 }

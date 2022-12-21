@@ -114,6 +114,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC021B332953A44C00DDC450 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC93856929465D1E00C3A270 /* UIColor+ext.swift */,
+				FCA9A9A2292A73BA00B5217E /* UIView+ext.swift */,
+				FC1226A929490EAC0077652C /* UIViewController+ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FCA33976292CA48900C38E7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				FCA9A991292A62CE00B5217E /* SupportingFiles */,
-				FCA9A994292A63A200B5217E /* Helpers */,
+				FC021B332953A44C00DDC450 /* Extensions */,
+				FCA9A994292A63A200B5217E /* Resources */,
 				FCA33976292CA48900C38E7B /* Models */,
 				FCA9A99A292A68D500B5217E /* Services */,
 				FC021B302953A34E00DDC450 /* Base */,
@@ -161,20 +172,17 @@
 				FCA9A98B292A60D500B5217E /* Info.plist */,
 				FCA9A988292A60D500B5217E /* LaunchScreen.storyboard */,
 				FCA9A97D292A60D500B5217E /* AppDelegate.swift */,
-				FCA9A986292A60D500B5217E /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		FCA9A994292A63A200B5217E /* Helpers */ = {
+		FCA9A994292A63A200B5217E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCA9A986292A60D500B5217E /* Assets.xcassets */,
 				FCA9A998292A688900B5217E /* Resources.swift */,
-				FC93856929465D1E00C3A270 /* UIColor+ext.swift */,
-				FCA9A9A2292A73BA00B5217E /* UIView+ext.swift */,
-				FC1226A929490EAC0077652C /* UIViewController+ext.swift */,
 			);
-			path = Helpers;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FCA9A99A292A68D500B5217E /* Services */ = {

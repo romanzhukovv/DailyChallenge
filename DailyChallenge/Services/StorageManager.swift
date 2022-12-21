@@ -8,5 +8,15 @@
 import Foundation
 
 class StorageManager {
+    static let shared = StorageManager()
     
+    private let userDefaults = UserDefaults.standard
+    
+    func setOnboardingStatus() {
+        userDefaults.set(true, forKey: "onboardingIsViewed")
+    }
+    
+    func getOnboardingStatus() -> Bool {
+        userDefaults.bool(forKey: "onboardingIsViewed")
+    }
 }
