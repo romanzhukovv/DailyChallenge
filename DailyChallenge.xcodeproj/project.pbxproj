@@ -92,7 +92,7 @@
 		FC021B312953A37500DDC450 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				FC9D9827292D0D1F0028A239 /* Views */,
+				FC021B322953A3F800DDC450 /* Views */,
 				FCC9DB7E293B809A008D7681 /* OnboardingPageViewController.swift */,
 				FCC9DB80293B871C008D7681 /* FirstPageViewController.swift */,
 				FCC9DB82293B872F008D7681 /* SecondPageViewController.swift */,
@@ -102,7 +102,7 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		FC9D9827292D0D1F0028A239 /* Views */ = {
+		FC021B322953A3F800DDC450 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FC1226AB29491B8F0077652C /* FirstPageView.swift */,
@@ -111,8 +111,7 @@
 				FC91AF70292FB0F700A4D352 /* CategoryViewCell.swift */,
 				FC4646642949A81600A1897A /* CategoriesPickerView.swift */,
 			);
-			name = Views;
-			path = ..;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FCA33976292CA48900C38E7B /* Models */ = {
