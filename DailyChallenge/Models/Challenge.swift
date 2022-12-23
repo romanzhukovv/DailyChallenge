@@ -16,7 +16,11 @@ struct Challenge: Hashable {
         case sport = "Спорт"
         case food = "Питание"
         case health = "Здоровье"
-        case selfDevelopment = "Саморазвитие"
+        case selfStudy = "Самообразование"
+        case languages = "Иностранные языки"
+        case awareness = "Осознанность"
+        case reading = "Чтение"
+        case secret = "Секрет"
     }
     
     func getChallenges() -> [Challenge] {

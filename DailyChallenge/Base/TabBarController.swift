@@ -31,11 +31,11 @@ class TabBarController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if StorageManager.shared.getOnboardingStatus() == false {
+//        if StorageManager.shared.getOnboardingStatus() == false {
             let pageVC = OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
 //            pageVC.isModalInPresentation = true
             pageVC.modalPresentationStyle = .fullScreen
-            present(pageVC, animated: false)
-        }
+            present(pageVC, animated: true)
+//        }
     }
 }

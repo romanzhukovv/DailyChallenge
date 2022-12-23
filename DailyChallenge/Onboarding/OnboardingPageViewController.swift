@@ -94,7 +94,7 @@ class OnboardingPageViewController: UIPageViewController {
             onboardingProgressView.setProgress(1.0, animated: true)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                StorageManager.shared.setOnboardingStatus()
+//                StorageManager.shared.setOnboardingStatus()
                 self.dismiss(animated: true)
             }
         }
